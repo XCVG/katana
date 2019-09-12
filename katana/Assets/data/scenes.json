@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "frames": {}
+  },
+  "intro": {
+    "position": "fill",
+    "background": "introbg",
+    "music": "awake",
+    "default": "intro1",
+    "hideMenuBar": true,
+    "frames": {
+      "intro1": {
+        "type": "image",
+        "image": "c1",
+        "allowSkip": true,
+        "hideSkip": false,
+        "useTimer": false,
+        "next": "intro.intro2"
+      },
+      "intro2": {
+        "type": "image",
+        "image": "c2",
+        "allowSkip": true,
+        "hideSkip": false,
+        "useTimer": false,
+        "next": "intro.intro3"
+      },
+      "intro3": {
+        "type": "image",
+        "image": "c3",
+        "allowSkip": true,
+        "hideSkip": false,
+        "useTimer": false,
+        "next": "intro.intro4"
+      },
+      "intro4": {
+        "type": "image",
+        "image": "c4",
+        "allowSkip": false,
+        "hideSkip": false,
+        "timeToShow": 10,
+        "useTimer": true,
+        "next": "coldopen"
+      }
+    }
+  },
+  "coldopen": {
+    "background": "academy_townsquare",
+    "music": "academy",
+    "default": "matsuda1",
+    "frames": {
+      "matsuda1": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda2",
+        "text": "Hey, there you are! I made it into the academy, too!"
+      },
+      "matsuda2": {
+        "type": "choice",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "choices": [
+          {
+            "text": "I thought you didn't want to come here?",
+            "next": "this.matsuda3"
+          },
+          {
+            "text": "Why would they let you in?",
+            "next": "this.matsuda4"
+          }
+        ]
+      },
+      "matsuda3": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda5",
+        "text": "I mean, it’s pretty scary, and I'm still worried about the food and co-ed dorms and stuff. It's not going to be easy here, but nothing is easy, right?"
+      },
+      "matsuda4": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda5",
+        "text": "I mean, I probably shouldn't be here. But they looked at my transcripts and apparently I'm supposed to be really smart or something. I guess I just faked my way in by accident."
+      },
+      "matsuda5": {
+        "type": "choice",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "choices": [
+          {
+            "text": "Chin up, it'll be great!",
+            "next": "this.matsuda6"
+          },
+          {
+            "text": "You <strong>really</strong> shouldn't be here.",
+            "next": "this.matsuda7",
+            "microscript": [
+              {
+                "affinity": "matsuda",
+                "add": -1
+              }
+            ]
+          }
+        ]
+      },
+      "matsuda6": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda8",
+        "text": "Yeah, I guess. It'll be just like high school, right?"
+      },
+      "matsuda7": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda8",
+        "text": "Yeah, I guess. My mom will kill me if I don't at least give it a shot, though, so I'm stuck between a rock and a hard place."
+      },
+      "matsuda8": {
+        "type": "text",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "next": "this.matsuda9",
+        "text": "Anyway, I have to go, uh, clear some stuff up with the registrar. Go introduce yourself to those girls, I know you’re thinking about it."
+      },
+      "matsuda9": {
+        "type": "choice",
+        "image": "matsuda",
+        "nameText": "Matsuda Toyoda",
+        "choices": [
+          {
+            "text": "Way ahead of you, partner.",
+            "next": "this.girls"
+          },
+          {
+            "text": "[sarcastically] Wow, I never thought of it, good idea!",
+            "next": "this.girls"
+          }
+        ]
+      },
+      "speech": {
+        "type": "video",
+        "background": "matte",
+        "music": "none",
+        "next": "coldopen2",
+        "video": "speech",
+        "position": "center"
+      },
+      "girls": {
+        "type": "area",
+        "title": "Town Square",
+        "hotspots": [
+          {
+            "x": 380,
+            "y": 460,
+            "height": 192,
+            "width": 72,
+            "image": "jen_standing",
+            "next": "this.jen1",
+            "hideCondition": {
+              "flag": "introJen"
+            },
+            "microscript": [
+              {
+                "flag": "introJen",
+                "set": true
+              }
+            ]
+          },
+          {
+            "x": 900,
+            "y": 500,
+            "height": 184,
+            "width": 72,
+            "image": "joanna_standing",
+            "showCondition": {
+              "flag": "introJen"
+            },
+            "next": "this.joanna1",
+            "hideCondition": {
+              "flag": "introJoanna"
+            },
+            "microscript": [
+              {
+                "flag": "introJoanna",
+                "set": true
+              }
+            ]
+          },
+          {
+            "x": 640,
+            "y": 480,
+            "height": 184,
+            "width": 96,
+            "image": "jill_standing",
+            "showCondition": {
+              "flag": "introJane"
+            },
+            "next": "this.jill1",
+            "hideCondition": {
+              "flag": "introJill"
+            },
+            "microscript": [
+              {
+                "flag": "introJill",
+                "set": true
+              }
+            ]
+          },
+          {
+            "x": 550,
+            "y": 460,
+            "height": 184,
+            "width": 60,
+            "image": "floretta_standing",
+            "next": "this.floretta1",
+            "hideCondition": {
+              "flag": "introFloretta"
+            },
+            "showCondition": {
+              "flag": "introJill"
+            },
+            "microscript": [
+              {
+                "flag": "introFloretta",
+                "set": true
+              }
+            ]
+          },
+          {
+            "x": 640,
+            "y": 480,
+            "height": 72,
+            "width": 72,
+            "image": "arrow",
+            "title": "Begin School",
+            "next": "this.speech",
+            "showCondition": {
+              "flag": "introWeiss"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "test": {
+    "frames": {
+      "text": {
+        "title": "Text Frame Test",
+        "type": "text",
+        "image": "jen",
+        "next": "intro.intro1",
+        "nameText": "Jen",
+        "text": "Hi! I'm <strong>Jen!</strong> I'm that hyper, quirky girl. You know, the \"Manic Pixie Dream Girl\". I bet you'll just <em>love</em> to meet me...\n\n(did I overdo it? oh gods I hope I didn't overdo it)"
+      },
+      "blank1": {
+        "title": "Blank Frame Test (MS)",
+        "type": "blank",
+        "next": "intro.intro1",
+        "microscript": [
+          {
+            "flag": "blankFrameTest1",
+            "set": true
+          }
+        ]
+      },
+      "blank2": {
+        "title": "Blank Frame Test (MS)",
+        "type": "blank",
+        "conditional": [
+          {
+            "next": "meta.restart",
+            "conditions": []
+          },
+          {
+            "next": "text",
+            "conditions": [
+              {
+                "quest": "d5_end",
+                "started": true
+              }
+            ]
+          }
+        ]
+      },
+      "choice": {
+        "title": "Choice Frame Text",
+        "background": "introbg",
+        "type": "choice",
+        "image": "jen",
+        "nameText": "Name goes here",
+        "choices": [
+          {
+            "text": "*wave*",
+            "next": "test.text"
+          },
+          {
+            "text": "<span style=\"color:blue\">That's ridiculous!</span>",
+            "next": "test.text"
+          },
+          {
+            "text": "For no good reason at all, take this pendant.",
+            "next": "meta.main",
+            "showCondition": {
+              "item": "pendant"
+            }
+          }
+        ],
+        "text": "Lorem ipsum dolor sit amet (etc etc)"
+      },
+      "area": {
+        "type": "area",
+        "background": "testmap",
+        "music": "pca2",
+        "hotspots": [
+          {
+            "x": 100,
+            "y": 70,
+            "highlight": false,
+            "image": "house1",
+            "swapImage": "house2",
+            "next": "house.entry"
+          },
+          {
+            "x": 700,
+            "y": 128,
+            "width": 200,
+            "height": 100,
+            "highlight": true,
+            "showCondition": {
+              "flag": "openplace"
+            },
+            "name": "Bad Place",
+            "conditional": [
+              {
+                "next": "meta.restart",
+                "conditions": [
+                  {
+                    "quest": "d5_end",
+                    "started": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "battle": {
+        "music": "battle",
+        "type": "battle",
+        "background": "bb_test",
+        "next": "test.choice",
+        "loseNext": "test.text",
+        "enemy": {
+          "hp": 10,
+          "attack": 5,
+          "defence": 2,
+          "name": "Giant Rat",
+          "image": "b_rat"
+        }
+      },
+      "video": {
+        "type": "video",
+        "next": "this.text",
+        "video": "starwars",
+        "position": "center"
+      }
+    }
+  }
+}

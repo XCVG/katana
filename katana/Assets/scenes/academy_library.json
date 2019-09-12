@@ -1,0 +1,32 @@
+{
+  "default": "main",
+  "frames": {
+    "main": {
+      "title": "Zero Hayabusa Library",
+      "type": "area",
+      "background": "map_library",
+      "music": "academy",
+      "hotspots": [
+        {
+          "x": 24,
+          "y": 412,
+          "width": 48,
+          "height": 372,
+          "highlight": true,
+          "next": "academy.main",
+          "name": "Back To Campus"
+        },
+        {
+          "x": 656,
+          "y": 300,
+          "height": 160,
+          "width": 60,
+          "highlight": true,
+          "name": "Jen",
+          "image": "jen_standing",
+          "next": "jen_ambient"
+        }
+      ]
+    }
+  }
+}

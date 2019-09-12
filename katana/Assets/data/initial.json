@@ -1,0 +1,12 @@
+{
+  "flags": [],
+  "vars": {},
+  "quests": {},
+  "affinity": {"jen": 0,"jill": 0,"floretta": 0,"joanna": 0,"mazda": 0, "kenji": 0, "headmaster": 0},
+  "day": 1,
+  "playerHP": 100,
+  "playerXP": 0,
+  "playerLevel": 1,
+  "playerMoney": 50,
+  "inventory": ["uniform", "multitool"]
+}

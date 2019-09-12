@@ -1,0 +1,181 @@
+{
+  "title": "Headmaster's Office",
+  "background": "academy_headmaster",
+  "default": "headmaster1",
+  "music": "tension_academy",
+  "frames": {
+    "headmaster1": {
+      "type": "text",
+      "text": "Ah, Haneda Matsutake. You've certainly made a name for yourself at your old school. ",
+      "next": "this.headmaster2"
+    },
+    "headmaster2": {
+      "type": "text",
+      "text": "Ahem.",
+      "next": "this.headmaster3"
+    },
+    "headmaster3": {
+      "type": "text",
+      "text": "Do you know why I called you to my office?",
+      "next": "this.headmaster4"
+    },
+    "headmaster4": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "You wanted to meet me because I'm such a great guy.",
+          "next": "this.headmaster5"
+        },
+        {
+          "text": "I don't know, but I would like to know, Headmaster.",
+          "next": "this.headmaster5",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": 2
+            }
+          ]
+        },
+        {
+          "text": "I'm in pretty deep trouble, aren't I?",
+          "next": "this.headmaster6"
+        },
+        {
+          "text": "Whatever it is, it's probably a waste of my time.",
+          "next": "this.headmaster7",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": -2
+            }
+          ]
+        }
+      ]
+    },
+    "headmaster5": {
+      "type": "text",
+      "text": "I did wish to meet you, but not only because of your impressive background.",
+      "next": "this.headmaster8"
+    },
+    "headmaster6": {
+      "type": "text",
+      "text": "Of course not, mister Matsutake. No trouble at all, at least not from the Academy or myself.",
+      "next": "this.headmaster8"
+    },
+    "headmaster7": {
+      "type": "text",
+      "text": "I assure you that it most certainly is not.",
+      "next": "this.headmaster8"
+    },
+    "headmaster8": {
+      "type": "text",
+      "text": "There are dark forces lurking in the shadows of the world. Unimaginable evil that seeks to destroy all we have created, bring us to our knees and then snuff us out of existence. Given the chance, they would bring to ruin all that we have ever known.",
+      "next": "this.headmaster9"
+    },
+    "headmaster9": {
+      "type": "text",
+      "text": "We are more than a school, mister Matsutake. We are the light in the darkness, the sword and that shield standing against evil. We do not train mere doctors and lawyers, but guardians that will protect the world from the malevolent forces few will ever know. We hone the best and brightest to their finest edge and pray that they will be enough.",
+      "next": "this.headmaster10"
+    },
+    "headmaster10": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "And I'm special among the special?",
+          "next": "this.headmaster14"
+        },
+        {
+          "text": "This is some heavy stuff, Headmaster.",
+          "next": "this.headmaster14",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": 2
+            }
+          ]
+        },
+        {
+          "text": "Wow, what a load of bullshit.",
+          "next": "this.headmaster11",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": -3
+            }
+          ]
+        },
+        {
+          "text": "*yawn* Sorry, I kinda zoned out there.",
+          "next": "this.headmaster12",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": -5
+            }
+          ]
+        }
+      ]
+    },
+    "headmaster11": {
+      "type": "text",
+      "text": "Mind your tongue, mister Matsutake! It may be strange and even terrifying, but that is the ugly truth of our world.",
+      "next": "this.headmaster14"
+    },
+    "headmaster12": {
+      "type": "text",
+      "text": "Pay attention, mister Matsutake! This is the truth of the world. To know of it is a privilege, but in your position to not understand it would be fatal.",
+      "next": "this.headmaster14"
+    },
+    "headmaster14": {
+      "type": "text",
+      "text": "I will not mince words. You are not merely good. You are gifted, special. Destined for greatness, destined to rise above. You may even be the one we have been looking for all along.",
+      "next": "this.headmaster15"
+    },
+    "headmaster15": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "I don't know what to say, sir.",
+          "next": "this.headmaster17"
+        },
+        {
+          "text": "The one? Like Neo?",
+          "next": "this.headmaster17"
+        },
+        {
+          "text": "I'm still not buying any of this.",
+          "next": "this.headmaster16",
+          "microscript": [
+            {
+              "affinity": "headmaster",
+              "add": -2
+            }
+          ]
+        }
+      ]
+    },
+    "headmaster16": {
+      "type": "text",
+      "text": "I know it is not easy to understand, and even more difficult to accept. But the sooner you do so, the sooner you will be able to pursue your destiny. If you truly are the one, the fate of the world could hang in the balance.",
+      "next": "this.headmaster20"
+    },
+    "headmaster17": {
+      "type": "text",
+      "text": "I ask merely that you reflect on what I have said. I am sure a smart man such as yourself will come to the right conclusions on their own.",
+      "next": "this.headmaster20"
+    },
+    "headmaster20": {
+      "type": "text",
+      "text": "You need to go to class now, to prepare yourself. Think about what I have told you, and do not be afraid to act on your knowledge.",
+      "next": "academy_offices.main",
+      "nextMicroscript": [
+        {
+          "quest": "academy_main",
+          "set": 10
+        }
+      ]
+    }
+  },
+  "nameText": "Headmaster",
+  "image": "headmaster"
+}

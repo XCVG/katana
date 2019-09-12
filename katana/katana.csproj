@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{367FCAD0-B64C-43F1-B627-A9548DF6836D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>katana</RootNamespace>
+    <AssemblyName>katana</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\nwjs-v0.12.0-win-x64\nw.exe</StartProgram>
+    <StartArguments>..</StartArguments>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Assets\bg\" />
+    <Folder Include="Assets\char\" />
+    <Folder Include="Assets\mus\" />
+    <Folder Include="Assets\video\English\" />
+    <Folder Include="Assets\video\Japanese\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\font\OFL.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\game.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sfx\button.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sfx\hit1.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_config.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_exit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_inventory.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_mus1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_mus2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_sound1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ui\b_sound2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\libraries\jquery-3.2.1.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\main.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\readme.txt" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\data\scenes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\data\defs.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\data\initial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\font\Inconsolata-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\font\Inconsolata-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\academy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\academy_headmaster_initial.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\academy_library.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\academy_offices.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\coldopen2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scenes\DemoHealer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="extend.ps1" />
+    <None Include="zip.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\package.json" />
+    <Content Include="Config\package.Debug.json">
+      <DependentUpon>package.json</DependentUpon>
+    </Content>
+    <Content Include="Config\package.Release.json">
+      <DependentUpon>package.json</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\areaframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\battleframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\blankframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\choiceframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\configcontroller.ts" />
+    <TypeScriptCompile Include="Scripts\configstate.ts" />
+    <TypeScriptCompile Include="Scripts\endframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\framecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\gamedata.ts" />
+    <TypeScriptCompile Include="Scripts\gameengine.ts" />
+    <TypeScriptCompile Include="Scripts\gamestate.ts" />
+    <TypeScriptCompile Include="Scripts\imageframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\imagemanager.ts" />
+    <TypeScriptCompile Include="Scripts\inventorycontroller.ts" />
+    <TypeScriptCompile Include="Scripts\main.ts" />
+    <TypeScriptCompile Include="Scripts\mainmenucontroller.ts" />
+    <TypeScriptCompile Include="Scripts\soundmanager.ts" />
+    <TypeScriptCompile Include="Scripts\textframecontroller.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\inspector.d.ts" />
+    <TypeScriptCompile Include="Scripts\videoframecontroller.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile>Scripts\main.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile>Scripts\main.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>IF "$(ConfigurationName)" EQU "Release" (
+	echo Cleaning output directory: $(TargetDir)
+	del /S /Q "$(TargetDir)*.*"
+	REM del /S /Q "$(TargetDir)*.js.map"
+	echo.
+)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>echo Deleting redundant files from output directory: $(TargetDir)
+del /S /Q "$(TargetDir)$(TargetName)$(TargetExt)"
+del /S /Q "$(TargetDir)$(TargetName)$(TargetExt).config"
+del /S /Q "$(TargetDir)$(TargetName).pdb"
+echo.
+IF NOT EXIST "$(ProjectDir)Config\package.$(ConfigurationName).json" (
+	echo WARRNING: Extended configuration file "$(ProjectDir)Config\package.$(ConfigurationName).json" was not found. Using default.
+	copy /Y "$(ProjectDir)Config\package.json" "$(TargetDir)package.json"
+) ELSE (
+	IF EXIST "$(TargetDir)package.json" (
+		echo Deleting old package.json: $(TargetDir)package.json
+		del /S /Q "$(TargetDir)package.json"
+		echo.
+	)
+	echo Building package.json for configuration $(ConfigurationName): $(TargetDir)package.json
+	powershell -executionpolicy remotesigned -File "$(ProjectDir)extend.ps1" "$(ProjectDir)Config\package.json" "$(ProjectDir)Config\package.$(ConfigurationName).json" "$(TargetDir)package.json"
+	echo.
+)
+IF NOT EXIST "$(TargetDir)package.json" (
+	echo ERROR: Configuration is missing
+)
+copy /Y "$(TargetDir)package.json" "$(ProjectDir)package.json"
+REM If release create nw package
+IF "$(ConfigurationName)" EQU "Release" (
+	IF EXIST "$(ProjectDir)$(TargetName).nw" (
+		echo Deleting old package: $(ProjectDir)$(TargetName).nw
+		del /S /Q "$(ProjectDir)$(TargetName).nw"
+		echo.
+	)
+	echo Building package: $(ProjectDir)$(TargetName).nw
+	powershell -executionpolicy remotesigned -File "$(ProjectDir)zip.ps1" "$(TargetDir)\" "$(ProjectDir)$(TargetName).nw"
+	IF NOT EXIST "$(ProjectDir)$(TargetName).nw" (
+		echo ERROR: Building package "$(ProjectDir)$(TargetName).nw" failed!
+	)
+ )</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

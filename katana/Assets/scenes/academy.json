@@ -1,0 +1,93 @@
+{
+  "frames": {
+    "main": {
+      "title": "Zero Hayabusa Academy",
+      "type": "area",
+      "background": "map_campus",
+      "music": "academy",
+      "hotspots": [
+        {
+          "x": 190,
+          "y": 185,
+          "width": 300,
+          "height": 220,
+          "highlight": true,
+          "next": "academy_dorms.main",
+          "name": "Dorms"
+        },
+        {
+          "x": 282,
+          "y": 444,
+          "width": 190,
+          "height": 190,
+          "highlight": true,
+          "next": "academy_arena.main",
+          "name": "Arena"
+        },
+        {
+          "x": 610,
+          "y": 190,
+          "width": 330,
+          "height": 200,
+          "highlight": true,
+          "next": "academy_hall.main",
+          "name": "Main Hall"
+        },
+        {
+          "x": 610,
+          "y": 394,
+          "width": 300,
+          "height": 206,
+          "highlight": true,
+          "next": "academy_square.main",
+          "name": "Town Square"
+        },
+        {
+          "x": 594,
+          "y": 590,
+          "width": 300,
+          "height": 117,
+          "highlight": true,
+          "next": "academy_cafeteria.main",
+          "name": "Cafeteria"
+        },
+        {
+          "x": 904,
+          "y": 125,
+          "width": 190,
+          "height": 68,
+          "highlight": true,
+          "next": "academy_offices.main",
+          "name": "Offices"
+        },
+        {
+          "x": 1000,
+          "y": 255,
+          "width": 366,
+          "height": 192,
+          "highlight": true,
+          "next": "academy_classrooms.main",
+          "name": "Classrooms"
+        },
+        {
+          "x": 878,
+          "y": 488,
+          "width": 170,
+          "height": 190,
+          "highlight": true,
+          "next": "academy_library.main",
+          "name": "Library"
+        },
+        {
+          "x": 870,
+          "y": 636,
+          "width": 192,
+          "height": 64,
+          "highlight": true,
+          "next": "academy_terminal.main",
+          "name": "Terminal"
+        }
+      ]
+    }
+  }
+}

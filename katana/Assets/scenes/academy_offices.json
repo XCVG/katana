@@ -1,0 +1,84 @@
+{
+  "default": "main",
+  "frames": {
+    "main": {
+      "title": "Zero Hayabusa Academy Offices",
+      "type": "area",
+      "background": "map_offices",
+      "music": "academy",
+      "hotspots": [
+        {
+          "x": 140,
+          "y": 650,
+          "width": 280,
+          "height": 140,
+          "highlight": true,
+          "next": "academy.main",
+          "name": "Back To Campus",
+          "conditional": [
+            {
+              "next": "academy.main",
+              "conditions": []
+            },
+            {
+              "next": "academy_zaibatsu_introduction",
+              "conditions": [
+                {
+                  "quest": "academy_main",
+                  "greaterEqual": 10
+                },
+                {
+                  "noflag": "academy_zaibatsu_introduced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "x": 805,
+          "y": 268,
+          "width": 310,
+          "height": 172,
+          "highlight": true,
+          "next": "this.headmaster",
+          "name": "Headmaster's Office"
+        }
+      ]
+    },
+    "headmaster": {
+      "type": "blank",
+      "conditional": [
+        {
+          "next": "this.headmaster_not_in",
+          "conditions": []
+        },
+        {
+          "next": "academy_headmaster_initial",
+          "conditions": [
+            {
+              "quest": "academy_main",
+              "started": false
+            }
+          ]
+        },
+        {
+          "next": "academy_headmaster_initial",
+          "conditions": [
+            {
+              "quest": "academy_main",
+              "equal": 5
+            }
+          ]
+        }
+      ]
+    },
+    "headmaster_not_in": {
+      "title": "Zero Hayabusa Academy Offices",
+      "type": "text",
+      "background": "map_offices",
+      "music": "overworld",
+      "text": "The Headmaster is not in his office",
+      "next": "this.main"
+    }
+  }
+}

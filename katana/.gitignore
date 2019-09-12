@@ -1,0 +1,13 @@
+# ignore project directories
+
+/[Bb]in/
+/[Oo]bj/
+
+# ignore stupid build files
+
+/Scripts/app.js
+/Scripts/app.js.map
+/Scripts/main.js
+/Scripts/main.js.map
+/*.nw
+/package.json

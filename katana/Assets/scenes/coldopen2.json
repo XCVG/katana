@@ -1,0 +1,87 @@
+{
+  "title": "Town Square",
+  "background": "academy_townsquare",
+  "default": "pick",
+  "music": "academy",
+  "frames": {
+    "pick": {
+      "type": "blank",
+      "conditional": [
+        {
+          "next": "this.jen1",
+          "conditions": []
+        },
+        {
+          "next": "this.floretta1",
+          "conditions": [
+            {
+              "eval": "(globalState.affinity.floretta > globalState.affinity.jen && globalState.affinity.floretta >= globalState.affinity.jill && globalState.affinity.floretta >= globalState.affinity.joanna)"
+            }
+          ]
+        },
+        {
+          "next": "this.joanna1",
+          "conditions": [
+            {
+              "eval": "(globalState.affinity.joanna > globalState.affinity.jen && globalState.affinity.joanna >= globalState.affinity.jill && globalState.affinity.joanna >= globalState.affinity.floretta)"
+            }
+          ]
+        },
+        {
+          "next": "this.jill1",
+          "conditions": [
+            {
+              "eval": "(globalState.affinity.jill > globalState.affinity.jen && globalState.affinity.jill >= globalState.affinity.joanna && globalState.affinity.jill >= globalState.affinity.floretta)"
+            }
+          ]
+        },
+        {
+          "next": "this.jen1",
+          "conditions": [
+            {
+              "affinity": "jen",
+              "equal": 0
+            },
+            {
+              "affinity": "joanna",
+              "equal": 0
+            },
+            {
+              "affinity": "floretta",
+              "equal": 0
+            },
+            {
+              "affinity": "jill",
+              "equal": 0
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "type": "blank",
+      "next": "this.staffer1"
+    },
+    "staffer1": {
+      "nameText": "Janitor",
+      "image": "janitor_long",
+      "position": "fill",
+      "type": "text",
+      "next": "this.staffer2",
+      "text": "Hey! You Haneda Matsutake?"
+    },
+    "staffer2": {
+      "nameText": "Janitor",
+      "image": "janitor",
+      "type": "text",
+      "text": "Headmaster wants to talk to you. Building 586, his office is the big corner one.",
+      "next": "academy.main",
+      "microscript": [
+        {
+          "quest": "academy_main",
+          "start": 5
+        }
+      ]
+    }
+  }
+}

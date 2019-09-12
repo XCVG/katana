@@ -1,0 +1,62 @@
+{
+  "inventory": {
+    "skyrimpendant": {
+      "name": "Pendant",
+      "image": "i_jewel",
+      "description": "You tell people you got this in a far away land, but it was just a preorder bonus"
+    },
+    "sword_cheap": {
+      "name": "Cheap Sword",
+      "image": "i_sword",
+      "description": "A cheap katana, like the ones sold at the gift shop",
+      "attack": 2
+    },
+    "uniform": {
+      "name": "School Uniform",
+      "image": "i_uniform",
+      "description": "An official school uniform",
+      "defence": 1
+    },
+    "multitool": {
+      "name": "Multitool",
+      "image": "i_multitool",
+      "description": "Your trusty Swiss-made 26-in-1 multitool",
+      "attack": 1
+    }
+  },
+  "quests": {
+    "d5_destroy": {
+      "name": "D5: Setting Sun",
+      "stages": {
+        "1": "Find the entrance to D5",
+        "2": "Activate the self-destruct",
+        "-1": "You've destroyed D5",
+        "-2": "You've saved D5"
+      }
+    },
+    "d5_get": {
+      "name": "D5: The Search Begins",
+      "text": "Rumour is there is a facility called D5 somewhere around here. Ask around for its existence"
+    },
+    "zaibatsu_main": {
+      "name": "Zaibatsu: Free Enterprise",
+      "text": "The Furikake Zaibatsu, a fast-growing conglomerate, wishes to employ you and your skills.",
+      "stages": {
+        "10": "Kenji Shi, CEO of the Furikake Zaibatsu, has approached you with an offer. Head to his office to learn more.",
+        "20": "You've accepted the offer from the Furikake Zaibatsu. Return to the Academy and be on the lookout for signs of trouble.",
+        "-10": "You refused to work for the Furikake Zaibatsu"
+      }
+    },
+    "academy_main": {
+      "name": "Academy: Scholarly Excellence",
+      "text": "The Zero Hayabusa Academy is a force that stands against chaos and evil, and the Headmaster has requested your help.",
+      "stages": {
+        "5":  "The Headmaster has requested your presence. Find his office and speak to him.",
+        "10": "The Headmaster has personally welcomed you to the Academy and explained its mission. Be on the lookout for chaos and evil.",
+        "20": "You've agree to help stop the Furikake Zaibatsu's evil schemes. Work your way into the corporation and start searching for clues.",
+        "21": "You haven't decided whether to commit to the Academy's cause or not. There's still time to choose...",
+        "-20": "You refused to help the Zero Hayabusa Academy"
+      }
+    }
+  }
+}
